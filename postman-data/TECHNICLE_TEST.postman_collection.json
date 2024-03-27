@@ -1,0 +1,254 @@
+{
+	"info": {
+		"_postman_id": "2949dce0-3e38-4626-a929-d27624272c49",
+		"name": "TECHNICLE_TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "5823216",
+		"_collection_link": "https://orange-moon-64309.postman.co/workspace/New-Team-Workspace~3eb68d00-4fe5-4844-8913-965dff23e357/collection/5823216-2949dce0-3e38-4626-a929-d27624272c49?action=share&source=collection_link&creator=5823216"
+	},
+	"item": [
+		{
+			"name": "Medication",
+			"item": [
+				{
+					"name": "save medication",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNyIsInJvbGUiOiJvd25lciIsImlhdCI6MTcxMTQ5ODU4OCwiZXhwIjoxNzExNTAxNTg4fQ.UD-G77mYDKhtHvfXJOCjX3odb-caF1j1J6fb1XDRooY"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"test medication 3\",\r\n    \"description\": \"test descrioption 3\",\r\n    \"qty\":10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/medication/save"
+					},
+					"response": []
+				},
+				{
+					"name": "Get medication",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNyIsInJvbGUiOiJvd25lciIsImlhdCI6MTcxMTQ5ODE4OSwiZXhwIjoxNzExNTAxMTg5fQ.xX05ahJEmeG90mTnQ1mFHT3DsDeHgOxdi9FVak6THng"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/medication"
+					},
+					"response": []
+				},
+				{
+					"name": "update medicaton",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 1,\r\n        \"name\": \"test medication 1 aui\",\r\n        \"description\": \"test descrioption aui \",\r\n        \"qty\": 350,\r\n        \"status\": 1\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/medication"
+					},
+					"response": []
+				},
+				{
+					"name": "softdelete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/medication/2/soft-delete"
+					},
+					"response": []
+				},
+				{
+					"name": "permanent delete medication",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNyIsInJvbGUiOiJvd25lciIsImlhdCI6MTcxMTQ5ODU4OCwiZXhwIjoxNzExNTAxNTg4fQ.UD-G77mYDKhtHvfXJOCjX3odb-caF1j1J6fb1XDRooY"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3000/medication/2/permanent-delete"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "signUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"kasun\",\r\n    \"middle_name\": \"sankalpa\",\r\n    \"last_name\": \"kulasinge\",\r\n    \"email\": \"kasunsankslpa440@gmail.com\",\r\n    \"mobile\": \"0717312749\",\r\n    \"user_name\": \"owner\",\r\n    \"password\": \"kasun@#321\",\r\n    \"role\":\"owner\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/user/signup"
+					},
+					"response": []
+				},
+				{
+					"name": "signIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\":\"owner\",\r\n    \"password\":\"kasun@#321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/user/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "add customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNyIsInJvbGUiOiJvd25lciIsImlhdCI6MTcxMTUwMTk2MiwiZXhwIjoxNzExNTA0OTYyfQ.2FEVO0-dH7EU0DUY1IvjFjqiBCV6neWFGR2NpEL2bSM"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \" first_name\":\"kasun\",\r\n    \" middle_name\":\"sankalpa\",\r\n    \" last_name\":\"kulasinge\",\r\n    \"mobile\":\"0717312749\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/customer/save"
+					},
+					"response": []
+				},
+				{
+					"name": "get customers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNyIsInJvbGUiOiJvd25lciIsImlhdCI6MTcxMTUwMTk2MiwiZXhwIjoxNzExNTA0OTYyfQ.2FEVO0-dH7EU0DUY1IvjFjqiBCV6neWFGR2NpEL2bSM"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/customer"
+					},
+					"response": []
+				},
+				{
+					"name": "update customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNyIsInJvbGUiOiJvd25lciIsImlhdCI6MTcxMTUwMTk2MiwiZXhwIjoxNzExNTA0OTYyfQ.2FEVO0-dH7EU0DUY1IvjFjqiBCV6neWFGR2NpEL2bSM"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"first_name\":\"kasunsssssssss\",\r\n    \"middle_name\":\"sankalpa\",\r\n    \"last_name\":\"kulasinge\",\r\n    \"mobile\":\"0740426355\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/customer"
+					},
+					"response": []
+				},
+				{
+					"name": "soft delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNyIsInJvbGUiOiJvd25lciIsImlhdCI6MTcxMTUwMjkxNiwiZXhwIjoxNzExNTA1OTE2fQ.P-YhMoYk3vZDHKAGOzk9jeh1A8qoXDSnS9iPzW2FllI"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:3000/customer/1/soft-delete"
+					},
+					"response": []
+				},
+				{
+					"name": "permanent delete customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNyIsInJvbGUiOiJvd25lciIsImlhdCI6MTcxMTUwMjkxNiwiZXhwIjoxNzExNTA1OTE2fQ.P-YhMoYk3vZDHKAGOzk9jeh1A8qoXDSnS9iPzW2FllI"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/customer/1/permanent-delete"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
