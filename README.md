@@ -34,3 +34,8 @@ project run on http://localhost:3000
 - create / update / softdelete customer
 - role base authentication
 
+
+## Note
+
+The project is built on the NestJS framework, employing SQLite database and NestJS TypeORM for data handling. It implements role-based authentication with three roles: OWNER, CASHIER, and MANAGER. Validated DTOs are utilized to ensure the accuracy of user inputs
+
