@@ -39,3 +39,15 @@ project run on http://localhost:3000
 
 The project is built on the NestJS framework, employing SQLite database and NestJS TypeORM for data handling. It implements role-based authentication with three roles: OWNER, CASHIER, and MANAGER. Validated DTOs are utilized to ensure the accuracy of user inputs
 
+owner login - 
+    username - owner
+    password - kasun@#321
+
+cashier login - 
+    username - cashier
+    password - kasun@#321
+
+manager login - 
+    username - manager
+    password - kasun@#321
+
